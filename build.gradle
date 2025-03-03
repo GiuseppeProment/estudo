@@ -23,11 +23,10 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	testImplementation 'io.cucumber:cucumber-java:7.20.1'
+	testImplementation 'io.cucumber:cucumber-junit:7.20.1'
 }
 
-processResources {
-	exclude '**/Zone.Identifier'
-}
 tasks.named('test') {
 	useJUnitPlatform()
 }
